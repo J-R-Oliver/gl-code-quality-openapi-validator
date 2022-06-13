@@ -1,8 +1,11 @@
 # gl-code-quality-openapi-validator
 
 [![Build](https://github.com/J-R-Oliver/gl-code-quality-openapi-validator/actions/workflows/build.yml/badge.svg)](https://github.com/J-R-Oliver/gl-code-quality-openapi-validator/actions/workflows/build.yml)
+[![npm version](https://badge.fury.io/js/gl-code-quality-openapi-validator.svg)](https://badge.fury.io/js/gl-code-quality-openapi-validator)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+![NPM Downloads](https://img.shields.io/npm/dw/gl-code-quality-openapi-validator)
+
 
 <table>
 <tr>
