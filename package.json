@@ -1,0 +1,51 @@
+{
+  "name": "gl-code-quality-openapi-validator",
+  "version": "1.0.0",
+  "description": "GitLab Code Quality generator for IBM's OpenAPI Validator.",
+  "main": "bin/index.js",
+  "bin": {
+    "gl-code-quality-openapi-validator": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage --collectCoverageFrom=./lib/**",
+    "lint": "eslint ."
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/J-R-Oliver/gl-code-quality-openapi-validator.git"
+  },
+  "keywords": [
+    "openapi",
+    "gitlab",
+    "code-quality",
+    "javascript"
+  ],
+  "author": "James Oliver",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/J-R-Oliver/gl-code-quality-openapi-validator/issues"
+  },
+  "homepage": "https://github.com/J-R-Oliver/gl-code-quality-openapi-validator#readme",
+  "dependencies": {
+    "commander": "^9.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.17.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.5.3",
+    "eslint-plugin-jest-formatting": "^3.1.0",
+    "eslint-plugin-jsdoc": "^39.3.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-security": "^1.5.0",
+    "jest": "^28.1.1",
+    "prettier": "^2.6.2"
+  }
+}
