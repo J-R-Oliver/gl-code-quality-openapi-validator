@@ -1,6 +1,6 @@
 # gl-code-quality-openapi-validator
 
-![Build](github.com/J-R-Oliver/gl-code-quality-openapi-validator/actions/workflows/build/badge.svg)
+[![Build](https://github.com/J-R-Oliver/gl-code-quality-openapi-validator/actions/workflows/build.yml/badge.svg)](https://github.com/J-R-Oliver/gl-code-quality-openapi-validator/actions/workflows/build.yml)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
