@@ -161,3 +161,12 @@ This job automates tasks relating to repository linting and enforcing best pract
 #### Node
 
 This job automates `Node.js` specific tasks.
+
+### Release Workflow
+
+The [release](./.github/workflows/release.yml) workflow handles release tasks. This workflow consists of one job, `npm`.
+
+#### npm
+
+This job automates tasks relating to updating [changelog](./CHANGELOG.md), tagging and publishing to (
+npm)(https://www.npmjs.com).
