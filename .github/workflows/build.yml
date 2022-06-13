@@ -45,11 +45,13 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Setup Node ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-#         cache: npm # Currently broken
+          cache: npm
       - name: Install Dependencies
         run: npm ci
       - name: ESLint
