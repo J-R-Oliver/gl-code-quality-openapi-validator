@@ -1,6 +1,6 @@
 # gl-code-quality-openapi-validator
 
-![Build](github.com/J-R-Oliver/gl-code-quality-openapi-validator/actions/workflows/integration/badge.svg)
+![Build](github.com/J-R-Oliver/gl-code-quality-openapi-validator/actions/workflows/build/badge.svg)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
@@ -37,13 +37,29 @@ installed. `gl-code-quality-openapi-validator` has been tested on the current LT
 To install `gl-code-quality-openapi-validator` using `npm` execute:
 
 ```shell
-npm install gl-code-quality-openapi-validator
+npm install -g gl-code-quality-openapi-validator
 ```
 
-To execute `gl-code-quality-openapi-validator` run:
+The `-g` option installs `gl-code-quality-openapi-validator` globally so that it can be run from anywhere in the file
+system.
+
+To execute `gl-code-quality-openapi-validator` after installing globally run:
 
 ```shell
 gl-code-quality-openapi-validator
+```
+
+`gl-code-quality-openapi-validator` is designed to work
+with the JSON file output of [IBM's OpenAPI Validator](https://github.com/IBM/openapi-validator). Instructions for
+installation and usage can be found [here](https://github.com/IBM/openapi-validator#installation).
+
+The following command runs `lint-openapi` against `openapi-spec.yml` and redirects the JSON output to
+`openapi-validator-report.json`. `gl-code-quality-openapi-validator` is then able to convert this file into a GitLab
+Code Quality report.
+
+```shell
+lint-openapi --json openapi-spec.yml >> openapi-validator-report.json
+gl-code-quality-openapi-validator -s openapi-spec.yml 
 ```
 
 ## Options
@@ -52,7 +68,7 @@ gl-code-quality-openapi-validator
 have been provided. For example:
 
 ```shell
-gl-code-quality-openapi-validator -s ./specification/openapi-specification.yml -i ./reoprting/openapi-validator-report.json -o ./code-quality/gl-code-quality-report.json
+gl-code-quality-openapi-validator -s ./specification/openapi-specification.yml -i /reporting/openapi-validator-report.json -o ./code-quality/gl-code-quality-report.json
 ```
 
 ### Command Line Options
