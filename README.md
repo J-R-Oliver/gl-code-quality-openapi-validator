@@ -155,7 +155,7 @@ linting, testing, and releasing.
 ### Build Workflow
 
 The [build](./.github/workflows/build.yml) workflow handles integration tasks. This workflow consists of two jobs, `Git`
-and `Node`, that run in parallel.
+and `Node`, that run in parallel. This workflow is triggered on a push to a branch.
 
 #### Git
 
@@ -168,6 +168,8 @@ This job automates `Node.js` specific tasks.
 ### Release Workflow
 
 The [release](./.github/workflows/release.yml) workflow handles release tasks. This workflow consists of one job, `npm`.
+This workflow is triggered manually from
+the [GitHub Actions UI](https://github.com/J-R-Oliver/gl-code-quality-openapi-validator/actions).
 
 #### npm
 
