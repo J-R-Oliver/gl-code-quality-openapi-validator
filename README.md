@@ -168,5 +168,5 @@ The [release](./.github/workflows/release.yml) workflow handles release tasks. T
 
 #### npm
 
-This job automates tasks relating to updating [changelog](./CHANGELOG.md), tagging and publishing to (
-npm)(https://www.npmjs.com).
+This job automates tasks relating to updating [changelog](./CHANGELOG.md), and publishing
+to [npm](https://www.npmjs.com).
