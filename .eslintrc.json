@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "airbnb-base",
+    "plugin:jest/recommended",
+    "plugin:jest-formatting/recommended",
+    "plugin:jsdoc/recommended",
+    "plugin:node/recommended",
+    "prettier",
+    "plugin:security/recommended"
+  ],
+  "plugins": [
+    "jest",
+    "jest-formatting",
+    "jsdoc",
+    "node",
+    "prettier",
+    "security"
+  ],
+  "rules": {
+    "no-console": "off"
+  }
+}

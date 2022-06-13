@@ -1,0 +1,64 @@
+name: Build
+
+on:
+  push:
+
+jobs:
+  Git:
+    name: Git
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: Commit Lint
+        uses: wagoid/commitlint-github-action@v4
+      - name: Secrets Scan
+        uses: max/secret-scan@master
+        with:
+          exclude_path: 'secret-scan-exclude.txt'
+      - name: Shell Lint
+        uses: luizm/action-sh-checker@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Outstanding Todos
+        run: |
+          echo Checking for outstanding todos...
+          TODO_COUNT=$(grep -r '[\/\/#] [Tt][Oo][Dd][Oo]' . | wc -l)
+          if [[ $TODO_COUNT -gt 0 ]] ; then
+            echo "$TODO_COUNT" todos found...
+            grep -r '[\/\/#] [Tt][Oo][Dd][Oo]' . 
+            exit 1
+          fi
+          echo No todos found...
+
+
+
+  Node:
+    name: Node
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [ 14.x, 16.x ]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: Setup Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+#         cache: npm # Currently broken
+      - name: Install Dependencies
+        run: npm ci
+      - name: ESLint
+        run: npm run lint
+      - name: Unit Tests
+        run: npm test
+      - name: Test Coverage
+        run: npm run test:coverage
+      - name: Audit Dependencies
+        run: npx better-npm-audit audit --level=high
+      - name: Outdated Dependencies
+        run: npx check-outdated --columns package,current,latest,wanted

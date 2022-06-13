@@ -1,0 +1,102 @@
+{
+  "version": "0.80.0",
+  "errors": [
+    {
+      "path": [
+        "paths",
+        "/api",
+        "get",
+        "responses",
+        "200"
+      ],
+      "message": "\"200\" property must have required property \"description\".",
+      "rule": "oas3-schema",
+      "line": 22
+    },
+    {
+      "path": [
+        "components",
+        "responses",
+        "InternalServerError"
+      ],
+      "message": "\"500InternalServerError\" property must have required property \"$ref\".",
+      "rule": "oas3-schema",
+      "line": 73
+    },
+    {
+      "path": [
+        "components",
+        "responses",
+        "InternalServerError",
+        "content",
+        "application/json",
+        "schema"
+      ],
+      "message": "\"properties\" property type must be object.",
+      "rule": "oas3-schema",
+      "line": 77
+    }
+  ],
+  "warnings": [
+    {
+      "path": [
+        "paths",
+        "/api",
+        "get"
+      ],
+      "message": "Operation \"description\" must be present and non-empty string.",
+      "rule": "operation-description",
+      "line": 17
+    },
+    {
+      "path": [
+        "paths",
+        "/api",
+        "get"
+      ],
+      "message": "Operation \"summary\" must be present and non-empty string.",
+      "rule": "operation-summary",
+      "line": 17
+    },
+    {
+      "path": [
+        "components",
+        "responses",
+        "InternalServerError",
+        "content",
+        "application/json",
+        "schema"
+      ],
+      "message": "Error response should be an object with properties",
+      "rule": "response-error-response-schema",
+      "line": 77
+    },
+    {
+      "path": [
+        "components",
+        "responses",
+        "500InternalServerError",
+        "content",
+        "application/json",
+        "schema"
+      ],
+      "message": "Schema should have a non-empty description",
+      "rule": "schema-description",
+      "line": 77
+    },
+    {
+      "path": [
+        "components",
+        "responses",
+        "500InternalServerError",
+        "content",
+        "application/json",
+        "examples",
+        "500Example"
+      ],
+      "message": "properties value must be [\"object\"]",
+      "rule": "oas3-valid-media-example",
+      "line": 80
+    }
+  ]
+}
