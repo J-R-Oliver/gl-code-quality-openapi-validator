@@ -29,4 +29,4 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Commit Changelog
-        run: git push origin HEAD:main
+        run: git push --tags origin HEAD:main
