@@ -1,6 +1,6 @@
 {
   "name": "gl-code-quality-openapi-validator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "GitLab Code Quality generator for IBM's OpenAPI Validator.",
   "main": "bin/index.js",
   "bin": {
