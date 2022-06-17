@@ -27,6 +27,7 @@ on the merge request.
 
 - [Installation](#installation)
 - [Options](#options)
+- [GitLab](#gitlab)
 - [Local Development](#local-development)
 - [Testing](#testing)
 - [Conventional Commits](#conventional-commits)
@@ -85,6 +86,24 @@ The following command line options are available for configuration:
 | -i, --input \<input>                 | ./openapi-validator-report.json | Filepath for the OpenAPI Validator JSON report input |
 | -o, --output \<output>               | ./gl-code-quality-report.json   | Filepath for the GitLab Code Quality report output   |
 | -h, --help                           |                                 | display help for command                             |
+
+## GitLab
+
+`gl-code-quality-openapi-validator` is intended to be used as part of a GitLab CI/CD pipeline job. The following code
+snippet provides an example job declaration.
+
+```yaml
+openapi-validation:
+  stage: code-quality
+  image: node:latest
+  script:
+    - npm install -g ibm-openapi-validator @ibm-cloud/openapi-ruleset gl-code-quality-openapi-validator
+    - lint-openapi --json ./openapi-specification.yml >> openapi-validator-report.json
+    - gl-code-quality-openapi-validator -s ./openapi-specification.yml
+  artifacts:
+    reports:
+      codequality: gl-code-quality-report.json
+```
 
 ## Local Development
 
