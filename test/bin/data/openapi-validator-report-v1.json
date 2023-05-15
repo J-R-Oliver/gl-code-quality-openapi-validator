@@ -1,0 +1,165 @@
+{
+  "error": {
+    "results": [
+      {
+        "path": [
+          "paths",
+          "/api",
+          "get",
+          "responses",
+          "200"
+        ],
+        "message": "\"200\" property must have required property \"description\".",
+        "rule": "oas3-schema",
+        "line": 22
+      },
+      {
+        "path": [
+          "components",
+          "responses",
+          "InternalServerError"
+        ],
+        "message": "\"500InternalServerError\" property must have required property \"$ref\".",
+        "rule": "oas3-schema",
+        "line": 73
+      },
+      {
+        "path": [
+          "components",
+          "responses",
+          "InternalServerError",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        "message": "\"properties\" property type must be object.",
+        "rule": "oas3-schema",
+        "line": 77
+      }
+    ],
+    "summary": {
+      "total": 3,
+      "entries": [
+        {
+          "generalizedMessage": "\"200\" property must have required property \"description\".",
+          "count": 1,
+          "percentage": 25
+        },
+        {
+          "generalizedMessage": "\"500InternalServerError\" property must have required property \"$ref\".",
+          "count": 1,
+          "percentage": 25
+        },
+        {
+          "generalizedMessage": "\"properties\" property type must be object.",
+          "count": 1,
+          "percentage": 25
+        }
+      ]
+    }
+  },
+  "warning": {
+    "results": [
+      {
+        "path": [
+          "paths",
+          "/api",
+          "get"
+        ],
+        "message": "Operation \"description\" must be present and non-empty string.",
+        "rule": "operation-description",
+        "line": 17
+      },
+      {
+        "path": [
+          "paths",
+          "/api",
+          "get"
+        ],
+        "message": "Operation \"summary\" must be present and non-empty string.",
+        "rule": "operation-summary",
+        "line": 17
+      },
+      {
+        "path": [
+          "components",
+          "responses",
+          "InternalServerError",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        "message": "Error response should be an object with properties",
+        "rule": "response-error-response-schema",
+        "line": 77
+      },
+      {
+        "path": [
+          "components",
+          "responses",
+          "500InternalServerError",
+          "content",
+          "application/json",
+          "schema"
+        ],
+        "message": "Schema should have a non-empty description",
+        "rule": "schema-description",
+        "line": 77
+      },
+      {
+        "path": [
+          "components",
+          "responses",
+          "500InternalServerError",
+          "content",
+          "application/json",
+          "examples",
+          "500Example"
+        ],
+        "message": "properties value must be [\"object\"]",
+        "rule": "oas3-valid-media-example",
+        "line": 80
+      }
+    ],
+    "summary": {
+      "total": 5,
+      "entries": [
+        {
+          "generalizedMessage": "Operation \"description\" must be present and non-empty string.",
+          "count": 1,
+          "percentage": 25
+        },
+        {
+          "generalizedMessage": "Operation \"summary\" must be present and non-empty string.",
+          "count": 1,
+          "percentage": 25
+        },
+        {
+          "generalizedMessage": "Schema should have a non-empty description",
+          "count": 1,
+          "percentage": 25
+        },
+        {
+          "generalizedMessage": "properties value must be [\"object\"]",
+          "count": 1,
+          "percentage": 25
+        }
+      ]
+    }
+  },
+  "info": {
+    "results": [],
+    "summary": {
+      "total": 0,
+      "entries": []
+    }
+  },
+  "hint": {
+    "results": [],
+    "summary": {
+      "total": 0,
+      "entries": []
+    }
+  },
+  "hasResults": true
+}
