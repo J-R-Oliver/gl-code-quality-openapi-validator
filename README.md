@@ -35,8 +35,8 @@ on the merge request.
 
 ## Installation
 
-To install this project you will need to have [Node.js](https://nodejs.org/en/) (`>=14.0.0`)
-installed. `gl-code-quality-openapi-validator` has been tested on the current LTS versions, `14.0.X` and `16.0.X`.
+To install this project you will need to have [Node.js](https://nodejs.org/en/) (`>=16.0.0`)
+installed. `gl-code-quality-openapi-validator` has been tested on the current LTS versions, `16.0.X` and `18.0.X`.
 
 To install `gl-code-quality-openapi-validator` using `npm` execute:
 
