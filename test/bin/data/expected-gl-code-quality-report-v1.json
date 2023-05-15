@@ -1,0 +1,90 @@
+[
+  {
+    "description": "\"200\" property must have required property \"description\".",
+    "fingerprint": "e15ad0a6144cdd30fe2446eee4e43198",
+    "severity": "major",
+    "location": {
+      "path": "./openapi-specification.yml",
+      "lines": {
+        "begin": 22
+      }
+    }
+  },
+  {
+    "description": "\"500InternalServerError\" property must have required property \"$ref\".",
+    "fingerprint": "505e79666a4a7eba372552d39ba2b718",
+    "severity": "major",
+    "location": {
+      "path": "./openapi-specification.yml",
+      "lines": {
+        "begin": 73
+      }
+    }
+  },
+  {
+    "description": "\"properties\" property type must be object.",
+    "fingerprint": "0bb468c6d0ee704a851f35a5b6ada867",
+    "severity": "major",
+    "location": {
+      "path": "./openapi-specification.yml",
+      "lines": {
+        "begin": 77
+      }
+    }
+  },
+  {
+    "description": "Operation \"description\" must be present and non-empty string.",
+    "fingerprint": "0c1335ec845514387aa2b2c00577bb4f",
+    "severity": "minor",
+    "location": {
+      "path": "./openapi-specification.yml",
+      "lines": {
+        "begin": 17
+      }
+    }
+  },
+  {
+    "description": "Operation \"summary\" must be present and non-empty string.",
+    "fingerprint": "9c9c396438539f6bcf367988e8de32d0",
+    "severity": "minor",
+    "location": {
+      "path": "./openapi-specification.yml",
+      "lines": {
+        "begin": 17
+      }
+    }
+  },
+  {
+    "description": "Error response should be an object with properties",
+    "fingerprint": "e9f284fe4671977a42cc4ce43469c01b",
+    "severity": "minor",
+    "location": {
+      "path": "./openapi-specification.yml",
+      "lines": {
+        "begin": 77
+      }
+    }
+  },
+  {
+    "description": "Schema should have a non-empty description",
+    "fingerprint": "62d9f01c8addb67cf79b9f03790d5e8f",
+    "severity": "minor",
+    "location": {
+      "path": "./openapi-specification.yml",
+      "lines": {
+        "begin": 77
+      }
+    }
+  },
+  {
+    "description": "properties value must be [\"object\"]",
+    "fingerprint": "3be9802ac1271a141376f233c39cbf8c",
+    "severity": "minor",
+    "location": {
+      "path": "./openapi-specification.yml",
+      "lines": {
+        "begin": 80
+      }
+    }
+  }
+]
