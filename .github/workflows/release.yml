@@ -28,5 +28,5 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Commit Changelog
+      - name: Commit Changelog & tag
         run: git push --tags origin HEAD:main
